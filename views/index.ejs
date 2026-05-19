@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 5</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>CSCI39548 - Homework 5</h1>
+
+  <form class="add-form" action="/songs" method="POST">
+    <input type="text" name="title" placeholder="Title" required />
+    <input type="text" name="artist" placeholder="Artist" required />
+    <input type="text" name="genre" placeholder="Genre" required />
+    <button type="submit">Add Song</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% songs.forEach(song => { %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artist %></td>
+          <td><%= song.genre %></td>
+          <td class="actions">
+            <a class="btn-edit" href="/songs/<%= song._id %>/edit">Edit</a>
+            <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
+              <button class="btn-delete" type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
