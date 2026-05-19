@@ -1,25 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Lora', serif;
   max-width: 700px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-form {
+h1 {
+  margin-bottom: 24px;
+}
+
+form.add-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 
-input {
-  padding: 6px;
+form.add-form input {
+  padding: 8px;
   font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-button {
-  padding: 6px 12px;
+form.add-form button {
+  padding: 8px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 table {
@@ -29,20 +42,75 @@ table {
 
 th, td {
   text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #ccc;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
 }
 
 th {
-  background: #eee;
+  background: #f5f5f5;
 }
 
 .actions {
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
-a {
+.btn-edit {
+  padding: 4px 10px;
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   text-decoration: none;
-  color: blue;
+  font-size: 13px;
+}
+
+.btn-delete {
+  padding: 4px 10px;
+  background: #e00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* edit page */
+form.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form.edit-form input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-save {
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-cancel {
+  padding: 8px 16px;
+  background: #eee;
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
 }
